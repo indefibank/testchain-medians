@@ -270,3 +270,58 @@ contract MedianAAVEUSD is Median {
         );
     }
 }
+
+contract MedianETHRUB is Median {
+    bytes32 public constant wat = "ETHRUB";
+
+    function recover(uint256 val_, uint256 age_, uint8 v, bytes32 r, bytes32 s) internal pure returns (address) {
+        return ecrecover(
+            keccak256(abi.encodePacked("\x19Ethereum Signed Message:\n32", keccak256(abi.encodePacked(val_, age_, wat)))),
+            v, r, s
+        );
+    }
+}
+
+contract MedianBTCRUB is Median {
+    bytes32 public constant wat = "BTCRUB";
+
+    function recover(uint256 val_, uint256 age_, uint8 v, bytes32 r, bytes32 s) internal pure returns (address) {
+        return ecrecover(
+            keccak256(abi.encodePacked("\x19Ethereum Signed Message:\n32", keccak256(abi.encodePacked(val_, age_, wat)))),
+            v, r, s
+        );
+    }
+}
+
+contract MedianDAIRUB is Median {
+    bytes32 public constant wat = "DAIRUB";
+
+    function recover(uint256 val_, uint256 age_, uint8 v, bytes32 r, bytes32 s) internal pure returns (address) {
+        return ecrecover(
+            keccak256(abi.encodePacked("\x19Ethereum Signed Message:\n32", keccak256(abi.encodePacked(val_, age_, wat)))),
+            v, r, s
+        );
+    }
+}
+
+contract MedianMATICRUB is Median {
+    bytes32 public constant wat = "MATICRUB";
+
+    function recover(uint256 val_, uint256 age_, uint8 v, bytes32 r, bytes32 s) internal pure returns (address) {
+        return ecrecover(
+            keccak256(abi.encodePacked("\x19Ethereum Signed Message:\n32", keccak256(abi.encodePacked(val_, age_, wat)))),
+            v, r, s
+        );
+    }
+}
+
+contract MedianBNBRUB is Median {
+    bytes32 public constant wat = "BNBRUB";
+
+    function recover(uint256 val_, uint256 age_, uint8 v, bytes32 r, bytes32 s) internal pure returns (address) {
+        return ecrecover(
+            keccak256(abi.encodePacked("\x19Ethereum Signed Message:\n32", keccak256(abi.encodePacked(val_, age_, wat)))),
+            v, r, s
+        );
+    }
+}
