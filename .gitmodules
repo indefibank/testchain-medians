@@ -3,4 +3,4 @@
 	url = https://github.com/dapphub/ds-test
 [submodule "lib/median"]
 	path = lib/median
-	url = https://github.com/makerdao/median
+	url = https://github.com/indefibank/median
